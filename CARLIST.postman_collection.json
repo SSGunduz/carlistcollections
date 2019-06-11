@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "49c6e7b7-645a-495a-97e6-88e555d3703a",
+		"name": "CARLIST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CARLIST_POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "file",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": null,
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/carlist/api/v1/cars/files/csvs/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carlist",
+						"api",
+						"v1",
+						"cars",
+						"files",
+						"csvs",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CARLIST_LISTING_POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\"code\": \"23\",\r\n\"make\": \"asd\",\r\n\"model\": \"megane\",\r\n\"kW\": 1325,\r\n\"year\": 2014,\r\n\"color\": \"red\",\r\n\"price\": 13990\r\n},\r\n{\r\n\"code\": \"21\",\r\n\"make\": \"renault\",\r\n\"model\": \"megane\",\r\n\"kW\": 132,\r\n\"year\": 2014,\r\n\"color\": \"red\",\r\n\"price\": 13990\r\n}\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/carlist/api/v1/cars/files/listings/32",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carlist",
+						"api",
+						"v1",
+						"cars",
+						"files",
+						"listings",
+						"32"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CARLIST_GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carlist/api/v1/cars/colors/red",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carlist",
+						"api",
+						"v1",
+						"cars",
+						"colors",
+						"red"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CARLIST_UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dealer\": \"39\",\r\n\"code\": \"22\",\r\n\"make\": \"num1\",\r\n\"model\": \"n1\",\r\n\"kW\": 2111,\r\n\"year\": 20126,\r\n\"color\": \"n\",\r\n\"price\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/carlist/api/v1/cars/files/listings/8c3f8012-a3a0-44e8-9466-16531687b85d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carlist",
+						"api",
+						"v1",
+						"cars",
+						"files",
+						"listings",
+						"8c3f8012-a3a0-44e8-9466-16531687b85d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
